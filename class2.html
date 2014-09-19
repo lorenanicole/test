@@ -20,7 +20,7 @@
   <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
   <!-- If use the PDF print sheet so students can print slides-->
-  
+
   <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
   <!--[if lt IE 9]>
@@ -56,7 +56,7 @@
             <!-- Homework Review - 10 min -->
             <section>
               <h3>Homework Discussion</h3>
-              <p>How was last week's homework? Do you have any questions or concepts that you'd like to discuss?</p>
+              <p>How was the homework from? Do you have any questions or concepts that you'd like to discuss?</p>
             </section>
 
             <!-- Block 1 30 minutes -->
@@ -66,7 +66,7 @@
                     <li>Arithmetic and variables</li>
                     <li>Data types</li>
                     <li>Text editor, command line, and ruby shell</li>
-                </ul> 
+                </ul>
             </section>
 
             <section>
@@ -95,7 +95,7 @@
 
             <section>
                 <h3>Boolean Expressions cheat sheet</h3>
-                
+
                 <table>
                     <tr>
                         <td>a == b</td>
@@ -136,7 +136,7 @@ a <= 3
 a >= 4
 a = 5
 b = 5
-a == b 
+a == b
 c = a == b # Combine comparison and assignment
 puts c
 3 &lt; 5
@@ -192,7 +192,7 @@ puts c
 true && false
 1 == 1 && 2 > 37
 "boop" == "bip" || 7 == 8
-false || true 
+false || true
 89 > 88 || 89 < 90
 true || not(1 == 1 || 2 == 65)
             </code></pre>
@@ -206,16 +206,16 @@ true || not(1 == 1 || 2 == 65)
 user_guess = gets.chomp.to_i
 secret_number = 312
 
-if user_guess < secret_number 
+if user_guess < secret_number
   puts "Too low!"
 elsif user_guess > secret_number
   puts "Too high!"
-else 
+else
   puts "You guessed it. Wow maybe you're psychic...."
-end 
+end
             </code></pre>
             <p>Can you tell what this code does?</p>
-          </section>                  
+          </section>
 
             <section>
                 <h3>Conditionals</h3>
@@ -248,7 +248,7 @@ if x > 3 && y > 3
   puts 'Both values are greater than 3'
 end
 
-# Or 
+# Or
 if x != 0 || y != 0
   puts 'The point x,y is not on the x or y axis'
 end
@@ -284,17 +284,17 @@ end
                 <p>Write a program in your text editor that uses conditionals and user input to allow the user to play an adventure game.</p>
                 <p>"gets.chomp" is the value of user input at the command line, with the trailing whitespace chomped off. To do math with it, convert it to an integer with the ".to_i" method</p>
                 <pre><code>
-                  input = gets.chomp.to_i 
+                  input = gets.chomp.to_i
                 </code></pre>
                 <p>Run your program by calling it with Ruby from the command line.</p>
                 <pre><code>
-                  $ ruby program_name.rb 
+                  $ ruby program_name.rb
                 </code></pre>
             </section>
             <section>
             <h3>Let's Develop It Example</h3>
                <pre><code class="ruby">
-# adventure.rb                   
+# adventure.rb
 puts "A vicious dragon is chasing you!"
 puts "Options:"
 puts "1 - Hide in a cave"
@@ -306,9 +306,9 @@ if input == '1'
   puts "You hide in a cave. The dragon finds you and asks if you'd like to play Scrabble. Maybe it's not so vicious after all!"
 elsif input == '2'
   puts "You climb a tree. The dragon can't find you."
-else 
+else
   puts "That's not a valid option."
-end 
+end
 </code></pre>
 <pre><code class="ruby">
 
@@ -329,7 +329,7 @@ x = 10
 while x > 0
   puts "Loop number #{x}"
   x = x - 1
-end 
+end
 
 puts 'Done'
                 </code></pre>
@@ -342,7 +342,7 @@ x = 10
 while x > 0
   puts "Loop number #{x}"
   x = x - 1
-end 
+end
                 </code></pre>
             <p>The while statement takes a condition, and as long as it evaluates to true, the code block beneath it is repeated. This creates a <strong>loop</strong>.</p>
             <p> Without the `x = x - 1` statement, to increment the value of x, this would be an <strong>infinite loop</strong> :( :( :(</p>
@@ -355,12 +355,12 @@ end
 num_bottles = 99
 
 while num_bottles > 0
-  puts "#{num_bottles} bottles of beer on the wall, 
-  #{num_bottles} bottles of beer, take one down, pass it 
+  puts "#{num_bottles} bottles of beer on the wall,
+  #{num_bottles} bottles of beer, take one down, pass it
   around, #{num_bottles - 1} bottles of beer on the wall!"
 
   num_bottles = num_bottles - 1
-end 
+end
                 </code></pre>
                 <p>"#{num_bottles}" is an example of <strong>string interpolation</strong></p>
             </section>
@@ -387,11 +387,11 @@ while loopy == true
   user_input = gets.chomp
   if user_input == 'false'
     loopy = false
-  end 
-end 
+  end
+end
                 </code></pre>
                 <p>Learn more about loops in Ruby <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" alt="Loops tutorial">here</a>.</p>
-            </section> 
+            </section>
 
               <section>
                 <h3>Each loops</h3>
@@ -403,8 +403,8 @@ end
   puts "Value of i is #{i}"
 end
                 </code></pre>
-                
-            </section> 
+
+            </section>
 
             <section>
                 <h3>Each loops</h3>
@@ -421,7 +421,7 @@ end
                 </ul>
                 <p>We will revisit the each loop when we have a better understanding of collections.</p>
             </section>
-   
+
 
             <!-- Block 3 30 minutes -->
             <section>
@@ -449,14 +449,14 @@ exclusive_range = (1...3) # contains 1, 2
 letter_range = ('a'..'e') # contains 'a', 'b', 'c', 'd', 'e'
             </code></pre>
             <p>Ranges are simply the range of values between the given first and last elements.</p>
-            <p><strong>Inclusive</strong> ranges have two dots, and include the last element. <strong>Exclusive</strong> ranges have three dots, and do not include the last element.</p> 
+            <p><strong>Inclusive</strong> ranges have two dots, and include the last element. <strong>Exclusive</strong> ranges have three dots, and do not include the last element.</p>
           <!--TODO is this right?-->
             <p>Ranges need to be defined from lowest value to highest.</p>
             </section>
 
              <section>
             <h3>Ranges</h3>
-            <p>Try out these range methods in IRB.</p> 
+            <p>Try out these range methods in IRB.</p>
             <pre><code>
 (1..99).max
 ('b'...'z').include?('j')
@@ -468,11 +468,11 @@ letter_range = ('a'..'e') # contains 'a', 'b', 'c', 'd', 'e'
 
 ('a'...'g').each do |l|
   puts "#{l} is a pretty good letter"
-end 
+end
 
 (22..28).to_a
             </code></pre>
-            <p>Learn more about ranges <a href="http://www.ruby-doc.org/core-2.1.1/Range.html" alt="Ruby Doc">here</a>.</p>  
+            <p>Learn more about ranges <a href="http://www.ruby-doc.org/core-2.1.1/Range.html" alt="Ruby Doc">here</a>.</p>
             </section>
 
             <section>
@@ -501,12 +501,12 @@ arr.include?("yee ha")
 new_array = [1, 3, 5, 89, 212, 7, -100]
 arr = ["wow", "woooo", "zowie"]
 
-new_array[0]    # returns the zeroth element 
-arr[2]          # returns the third element 
-arr[-1]         # returns the last (1st from the end) element 
-new_array.last  # returns the last element 
+new_array[0]    # returns the zeroth element
+arr[2]          # returns the third element
+arr[-1]         # returns the last (1st from the end) element
+new_array.last  # returns the last element
 new_array[1..2] # returns the second and third elements
-arr.first       # returns the first element 
+arr.first       # returns the first element
                 </code></pre>
             </section>
 
@@ -538,9 +538,9 @@ arr.join          # returns a string made up of all the elements
 arr.clear         # removes all elements from the array
 arr.reverse       # returns new array with same elements, reversed
 arr.shuffle       # returns new array with same elements, shuffled
-arr.uniq          # returns a new array with only unique elements     
+arr.uniq          # returns a new array with only unique elements
 arr.size          # returns the number of elements in the array
-arr.empty?        # returns a boolean 
+arr.empty?        # returns a boolean
                 </code></pre>
                 <p>Learn more about arrays <a href="http://www.ruby-doc.org/core-2.1.0/Array.html" alt="ruby documentation - array class">here</a>.</p>
             </section>
@@ -553,9 +553,9 @@ arr.empty?        # returns a boolean
 grades_hash = { "Jane Doe" => 10, "Jim Doe" => 6, "Jan Doe" => 8}
 new_hash = { 1 => "a", "d" => 12, "f" => 35 }
 
-# methods to find information about hashes 
+# methods to find information about hashes
 new_hash.length
-grades_hash.count 
+grades_hash.count
 grades_hash.size
 grades_hash.has_key?("Jan Doe")
 new_hash.has_value?(35)
@@ -585,31 +585,31 @@ grades_hash.first         # returns first key/value pair... probably
 new_hash = { 1 => "a", "d" => 12, "f" => 35 }
 
 # add
-new_hash["z"] = 43   # adds a new key/value pair "z" => 43 
+new_hash["z"] = 43   # adds a new key/value pair "z" => 43
 
 #remove
-new_hash.delete("d") # removes key/value pair with specified key   
-new_hash.clear       # removes all key/value pairs 
+new_hash.delete("d") # removes key/value pair with specified key
+new_hash.clear       # removes all key/value pairs
             </code></pre>
             </section>
 
             <section>
             <h3>More Hash methods</h3>
             <pre><code  class="ruby">
-chapters = {"My Early Home" => (1..15), "The Hunt" => (16..28), 
+chapters = {"My Early Home" => (1..15), "The Hunt" => (16..28),
             "My Breaking In" => (29..46), "Birtwick Park" => (46..60)}
 
 chapters.count      # returns number of key/value pairs in hash
 chapters.keys       # returns an array of all the keys in hash
 chapters.has_key?("How It Ended")  # returns a boolean
 chapters.to_a       # converts hash to an array of arrays
-chapters.invert     # returns new hash with old one's values 
+chapters.invert     # returns new hash with old one's values
                       # as keys and keys as values
               </code></pre>
               <p>Learn more about hashes <a href="http://www.ruby-doc.org/core-2.1.1/Hash.html" alt="Ruby Docs">here</a>.</p>
             </section>
 
-<!-- minutes --> 
+<!-- minutes -->
             <section>
             <h3>Enumerable</h3>
             <p><strong>Arrays</strong> and <strong>Hashes</strong> are both members of the <strong>Enumerable</strong> class. There are a lot of cool methods available for Enumerable, including <strong>each</strong>. </p>
@@ -640,7 +640,7 @@ end
 
 deep_array = [["mountain", "desert"], ["ocean", "sky"]]
 
-deep_array.each do |p| 
+deep_array.each do |p|
   puts "I like #{p.first}s!!"  # each element is also an array
 end
             </code></pre>
@@ -654,14 +654,14 @@ grades_hash = { "Jane Doe" => 10, "Jim Doe" => 6, "Jan Doe" => 8}
 
 grades_hash.each do |key, value|
   puts "#{key}'s grade is #{value}"
-end 
+end
             </code></pre>
             </section>
 
             <!-- Let's develop it: 10 minutes -->
             <section>
                 <h3>Let's Develop It</h3>
-               
+
             <p>Write a program that prints out every number between 1 and 1000 that is divisible by 7.</p>
             <br />
             <p>Hint: the modulo operator, %, will be helpful.</p>
@@ -698,8 +698,8 @@ $pets.collect{|p| p[:legs]}.reduce(:+) # returns sum of all pet legs
                 <h3>Enumerable: Reject</h3>
                 <p>Returns an array with all elements that did not meet the critera in code block.</p>
                 <pre><code class="ruby">
-$pets.reject{|p| p[:talents].include? "napping" }  
-      # returns array of pets whose talents do not include napping    
+$pets.reject{|p| p[:talents].include? "napping" }
+      # returns array of pets whose talents do not include napping
 
                 </code></pre>
             </section>
@@ -719,7 +719,7 @@ $pets.reject{|p| p[:nocturnal]== false}.count
                 </code></pre>
 
             </section> -->
- 
+
             <section>
                 <h3>Questions?</h3>
             </section>
