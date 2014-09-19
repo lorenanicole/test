@@ -20,7 +20,7 @@
         <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
         <!-- If use the PDF print sheet so students can print slides-->
-        
+
         <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
         <!--[if lt IE 9]>
@@ -95,16 +95,16 @@ numString = numString + ' and '
                   <h3>HW: 99 Bottles of Beer</h3>
                   <p>You could modify the code for 99 Bottles of Beer shown in Class2 to include the functionality in the EnglishNumber class: </p>
                   <pre><code class="ruby">
-require_relative 'englishnumber.rb' 
+require_relative 'englishnumber.rb'
 num_bottles = 999
 
 while num_bottles > 0
-  puts "#{englishNumber(num_bottles)} bottles of beer on the wall, 
-  #{englishNumber(num_bottles)} bottles of beer, take one down, pass it 
+  puts "#{englishNumber(num_bottles)} bottles of beer on the wall,
+  #{englishNumber(num_bottles)} bottles of beer, take one down, pass it
   around, #{englishNumber(num_bottles - 1)} bottles of beer on the wall!"
 
   num_bottles = num_bottles - 1
-end 
+end
                    </code></pre>
                 </section>
 
@@ -129,10 +129,10 @@ end
                       <li>Array</li>
                       <li>Hash</li>
                     </ul>
-                    <p>They are commonly used object types, and have methods associated with them already. How convenient!</p> 
+                    <p>They are commonly used object types, and have methods associated with them already. How convenient!</p>
                     <pre><code contenteditable class="ruby">
 a = Array.new
-b = String.new 
+b = String.new
 
                     </code></pre>
                 </section>
@@ -145,7 +145,7 @@ b = String.new
 b = "holy cow!"
 b.methods
                     </code></pre>
-                    <p>You can view all the built in classes and their associated methods in the <a href="http://www.ruby-doc.org/core-2.0.0/" alt="Ruby docuemntation">Ruby documentation</a>.</p> 
+                    <p>You can view all the built in classes and their associated methods in the <a href="http://www.ruby-doc.org/core-2.0.0/" alt="Ruby docuemntation">Ruby documentation</a>.</p>
                 </section>
 
                 <section>
@@ -154,11 +154,11 @@ b.methods
                     <pre><code contenteditable class="ruby">
 class String
   def get_excited
-    return self + "!!!" 
-  end 
-end 
+    return self + "!!!"
+  end
+end
                     </code></pre>
-                    <p>"self" refers to the object calling the method.</p> 
+                    <p>"self" refers to the object calling the method.</p>
                     <p>You can redefine existing methods for classes this way, too, but it's not recommended.</p>
                 </section>
 
@@ -167,22 +167,22 @@ end
                     <h3>Creating a Class</h3>
                     <p>It's very easy to create your own classes in Ruby.</p>
                     <pre><code contenteditable class="ruby">
-# die.rb                    
+# die.rb
 class Die
-  
-  def roll 
-     @numberShowing = 1 + rand(6) 
+
+  def roll
+     @numberShowing = 1 + rand(6)
     #rand(6) returns a random-ish number between 0-5
-  end 
+  end
 
-  def showing 
+  def showing
     return @numberShowing
-  end 
+  end
 
-end 
+end
                     </code></pre>
                     <p>Inside the class, define its methods.</p>
-                    </section> 
+                    </section>
                 <section>
                 <h3>Creating a Class</h3>
                 <p>You can use your class right away by loading it into IRB.</p>
@@ -193,7 +193,7 @@ die = Die.new
 die.roll
 puts die.showing
                 </code></pre>
-                <p>You can use it in another file by requiring it. We'll discuss this later.</p>               
+                <p>You can use it in another file by requiring it. We'll discuss this later.</p>
                 <!-- pause here til everyone's got this working -->
                 </section>
                 <section>
@@ -203,21 +203,21 @@ puts die.showing
                     <pre><code class="ruby">
 # die.rb
 class Die
-  
-  def initialize 
+
+  def initialize
     roll
-  end 
+  end
 
-  def roll 
-     @numberShowing = 1 + rand(6) 
-  end 
+  def roll
+     @numberShowing = 1 + rand(6)
+  end
 
-  def showing 
+  def showing
     @numberShowing
-  end 
+  end
 
-end 
- 
+end
+
                     </code></pre>
                 </section>
 
@@ -235,7 +235,7 @@ end
                 <h3>Example of creating a class</h3>
                     <pre><code contenteditable class="ruby">
 # in character.rb
-class Character 
+class Character
 
   def initialize(name)
     @name = name
@@ -244,18 +244,18 @@ class Character
 
   def heal
     @health += 6
-  end 
+  end
 
   def adventure
     if @health > 0
       puts "#{@name} goes on a great adventure and meets a dragon!"
       puts "The dragon hugged #{@name} kind of hard..."
       @health -= 5
-    else 
+    else
       puts "#{@name} is dead :("
       exit
-    end 
-  end 
+    end
+  end
 
 end
                     </code></pre>
@@ -268,13 +268,13 @@ end
 load 'character.rb'
 me = Character.new("Cheri")
 me.adventure
-me.heal 
+me.heal
 me.adventure
 # repeat until you're done having fun
 
                     </code></pre>
                 </section>
-        
+
         <!-- Putting it together: 10 minutes -->
                 <section>
                     <h3>Inheritance</h3>
@@ -290,14 +290,14 @@ me.adventure
 class Elf < Character
   def twinkle
     puts "I'm super magical!"
-  end 
+  end
 end
 
 #in irb
 load 'character.rb'
 me = Elf.new("Cheri")
 me.adventure
-me.twinkle 
+me.twinkle
                     </code></pre>
                     <p>Notice that the initialize method was also inherited, as our new Elf knows its name and started off with 10 health.</p>
                 </section>
@@ -315,7 +315,7 @@ class Elf < Character
 
   def heal
     @health += 8 # it's easier to heal when you're magic
-  end 
+  end
 end
 
 #in irb
@@ -342,11 +342,11 @@ me.heal
 # character.rb
 
 class Character
-  # contents of class here 
+  # contents of class here
 end
 
 class Elf < Character
-  # contents of class here 
+  # contents of class here
 end
                     </code></pre>
                     </section>
@@ -357,14 +357,14 @@ end
                     <pre><code contenteditable class="ruby">
 # adventure.rb
 
-require_relative 'character.rb' 
+require_relative 'character.rb'
   #file path relative to the location of adventure.rb file
 require_relative 'die.rb'
 
 
 puts "Your name?"
 char = Character.new(gets.chomp)
-# plus lots more adventuring..... 
+# plus lots more adventuring.....
                     </code></pre>
                     </section>
                     <section>
@@ -395,7 +395,7 @@ ruby adventure.rb
                 </section>
 
             <!-- Wrap up: 10 minutes -->
-                <section> 
+                <section>
                   <h3>Further Resources</h3>
                     <table style="font-size: 24px; line-height: 1.5em;">
                         <tr>
@@ -431,7 +431,7 @@ ruby adventure.rb
 
                 <section>
                 <h3>Homework</h3>
-                <p><strong>Practice:</strong>  Make your final project even bigger and better! If you're taking this class as part of a job plan, attend a <a href="http://www.seattlerb.org/" alt="Seattle rb">Seattle.rb</a> meetup and talk to a couple of strangers about what you've learned and what you're excited about doing with programming. </p>
+                <p><strong>Practice:</strong>  Make your final project even bigger and better! If you're taking this class as part of a job plan, attend the GDI career track classes like the <a href="http://www.meetup.com/Girl-Develop-It-Chicago-IL/events/205074012/" alt="Career class">salary negotations event</a> or pop into 1871 for an event (Founders Stories!). </p>
                 </section>
 
             </div>
